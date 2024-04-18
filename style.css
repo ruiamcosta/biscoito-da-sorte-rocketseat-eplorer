@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-size: 1.6rem;
+	background: linear-gradient(-45deg, #190361, #bb00ff);
+	background-size: 200% 200%;
+	animation: gradient 15s ease infinite;
+
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background-color: #fff;
+}
+
+.screen1,
+.screen2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screen1 {
+  padding: 4.8rem 6.4rem 6.4rem;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 2.4rem;
+  max-width: 25.8rem;
+  color: #34355b;
+  text-align: center;
+}
+
+.screen1 h1 {
+  max-width: 25.8rem;
+}
+
+.screen1 p {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #34355b;
+  margin: 1.35rem 0 2.05rem;
+}
+
+.screen2 {
+  padding: 4.8rem 6.4rem;
+  gap: 1.7rem;
+}
+
+.screen2 h1 {
+  max-width: 29.7rem;
+}
+
+.screen2 p {
+  font-family: 'Dancing Script', sans-serif;
+  max-width: 29.3rem;
+  padding: 1.0rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-align: center;
+  background: #e4edf1;
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+}
+
+button {
+  font-family: 'DM sans', sans-serif;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 1.6rem;
+  background: #ff9500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.screen1 img:hover {
+  animation: shaking 0.20s infinite;
+  cursor: pointer;
+}
+
+.screen2 p {
+  animation: scaling 1s normal;
+}
+
+// animations
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes shaking {
+  0% { transform: translateX(0)}
+  25% { transform: translateY(5px) rotate(1deg)}
+  50% { transform: translateX(-5px)}
+  75% { transform: translateY(5px) rotate(-2deg)}
+  100% { transform: translateX(0)}
+ }
+
+ @keyframes scaling {
+  0% { transform: translateY(175px) scale(0)}
+  100% { transform: translateY(0) scale(1)}
+ }
+
